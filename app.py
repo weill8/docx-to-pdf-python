@@ -1,6 +1,6 @@
 import os
 import pythoncom
-from flask import Flask, render_template, request, send_file, jsonify
+from flask import Flask, send_from_directory, request, send_file, jsonify
 from werkzeug.utils import secure_filename
 from docx2pdf import convert
 
@@ -25,7 +25,7 @@ def allowed_file(filename):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+   return send_from_directory(BASE_DIR, 'index.html')
 
 @app.route('/convert', methods=['POST'])
 def convert_docx_to_pdf():

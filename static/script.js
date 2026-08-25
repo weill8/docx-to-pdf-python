@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
             a.remove();
 
             // Notifikasi Sukses
-            showToast(`File "${downloadFileName}" berhasil dikonversi dan diunduh!`, 'success');
+            showToast(`File "${downloadFileName}" berhasil dikonversi dan siap diunduh!`, 'success');
 
             resetFileSelection();
 
